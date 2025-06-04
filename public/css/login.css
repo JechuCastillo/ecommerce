@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+    margin-bottom: .5em;
+      font-size: 4em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.conteiner-login {
+  padding: 3em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3em auto;
+  gap: 0.5em;
+  padding-bottom: 5em;
+  border: 1px solid black;
+  border-radius: 20px 20px;
+}
+
+input,button {
+  padding: 1em;
+  width: 50%;
+}
+button{
+    margin-top: 1em;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1em;
+  width: 100%;
+}
+#mensaje{
+  display: block;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  max-width: 100%;
+  text-align: left;
+}
+.token{
+  background-color: green;
+}
