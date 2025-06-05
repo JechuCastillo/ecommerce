@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="./css/login.css" />
   </head>
   <body>
-    <div class="conteiner-login">
+    <div class="conteiner">
       <form id="form-login">
         <h1>LogIn</h1>
         <input type="email" id="email" placeholder="Email" required/>
         <input type="password" id="password" placeholder="Contraseña" required/>
         <button type="submit">Login</button>
       </form>
-      <div id="mensaje"></div>
+      <div id="mensaje" class="mensaje"></div>
+    </div>
+    <div class="conteiner">
+      <form id="form-register">
+        <h1>Register</h1>
+        <input type="text" id="register-nombre" placeholder="Nombre de usuario">
+        <input type="email" id="register-email" placeholder="Email" required/>
+        <input type="password" id="register-password" placeholder="Contraseña" required/>
+        <button type="submit">Login</button>
+      </form>
+      <div id="mensaje-register" class="mensaje"></div>
     </div>
   </body>
   <script src="js/scripts.js"></script>

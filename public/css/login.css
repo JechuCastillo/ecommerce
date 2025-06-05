@@ -7,7 +7,7 @@ h1 {
       font-size: 4em;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-.conteiner-login {
+.conteiner {
   padding: 3em;
   width: 50%;
   display: flex;
@@ -35,7 +35,7 @@ form{
   gap:1em;
   width: 100%;
 }
-#mensaje{
+.mensaje{
   display: block;
   overflow-wrap: break-word;
   word-break: break-all;

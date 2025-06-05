@@ -13,7 +13,7 @@ async function login(req, res) {
       sameSite: "Strict",
       maxAge: 600000,
     });
-    res.json(resultado); //En caso de exito devuelve el token
+    res.success(resultado); //En caso de exito devuelve el token
   } catch (error) {
     res.status(401).json({ error: error.message });
   }
