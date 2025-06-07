@@ -58,6 +58,7 @@ function verCarrito() {
   carritoList.innerHTML = "";
   carrito.forEach((producto) => {
     const li = document.createElement("li");
+    li.classList.add('producto-carrito')
     li.textContent = `${producto.nombre} $${producto.precio}`;
     carritoList.appendChild(li);
   });

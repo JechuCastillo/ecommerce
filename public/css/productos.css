@@ -7,7 +7,6 @@
 body {
   width: 80%;
   margin: 0 auto;
-  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,13 +27,14 @@ table {
   text-align: center;
   background-color: white;
   border-collapse: collapse;
+  box-shadow: 0px 0px 15px 5px rgb(230, 230, 230);
+  margin-bottom: 2em;
 }
 tr {
-    border-bottom: 1px solid black;
-
+  border-bottom: 1px solid black;
 }
-tr:last-child{
-    border-bottom: none;
+tr:last-child {
+  border-bottom: none;
 }
 td,
 th {
@@ -42,18 +42,34 @@ th {
   width: 2em;
   margin: 0;
 }
-th{
-    border-bottom: 1px solid black;
+td {
+  padding: 0;
 }
-footer{margin-top: 2em;}
-tr button{
-  margin: 1em 0;
-  padding: .5em;
+th {
+  border-bottom: 1px solid black;
+}
+footer {
+  margin-top: 2em;
+}
+tr button {
+  margin: .5em 0;
+  padding: 0.5em;
   border-style: none;
   font-weight: bold;
 }
 
-ul{
-    list-style: none;
-    line-height: 2em;
+ul {
+  list-style: none;
+  line-height: 2em;
+  text-align: left;
+}
+
+.producto-carrito{
+  box-shadow: 1px 1px 5px 1px black;
+  width: 15em;
+  padding: .3em;
+  margin: .5em 0;
+}
+section h2{
+  text-align: center;
 }

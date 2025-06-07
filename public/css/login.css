@@ -1,13 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-h1 {
-    margin-bottom: .5em;
-      font-size: 4em;
-  font-family: Georgia, "Times New Roman", Times, serif;
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 5em;
+  font-weight: bold;
+  color: rgb(22, 22, 108);
 }
 .conteiner {
+  text-align: center;
   padding: 3em;
   width: 50%;
   display: flex;
@@ -16,32 +20,39 @@ h1 {
   margin: 3em auto;
   gap: 0.5em;
   padding-bottom: 5em;
-  border: 1px solid black;
+  box-shadow: 0px 0px 15px 5px rgb(230, 230, 230);
   border-radius: 20px 20px;
 }
 
-input,button {
+input,
+button {
   padding: 1em;
   width: 50%;
 }
-button{
-    margin-top: 1em;
+button {
+  margin-top: 1em;
+  border-style: none;
+  background-color: rgb(22, 22, 108);
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1em;
+  gap: 1em;
   width: 100%;
 }
-.mensaje{
+.mensaje {
   display: block;
   overflow-wrap: break-word;
   word-break: break-all;
   max-width: 100%;
   text-align: left;
 }
-.token{
+.token {
   background-color: green;
 }

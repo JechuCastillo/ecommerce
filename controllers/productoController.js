@@ -40,6 +40,9 @@ async function crearProducto(req, res) {
   }
 }
 
+
+
+
 const validarProducto = [
   body("nombre")
     .trim()

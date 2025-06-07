@@ -12,7 +12,6 @@ form.addEventListener("submit", async (e) => {
     });
 
     const data = await res.json();
-    console.log(data.data.token);
     if (!res.ok) {
       throw new Error(data.error || "Credenciales invalidas");
     }

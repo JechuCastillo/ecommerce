@@ -10,9 +10,9 @@ const {
   validarUsuarioNuevo,
 } = require("../controllers/usuarioController");
 
-router.post("/register", validarUsuarioNuevo, crearUsuario);
+router.post("/register", rolMiddleware, validarUsuarioNuevo, crearUsuario);
 router.get("/", authMiddleware, rolMiddleware, obtenerUsuarios);
-router.put("/:nombreUsuario", actualizarUsuario);
+router.put("/:nombreUsuario", rolMiddleware,actualizarUsuario);
 router.delete("/:nombreUsuario", authMiddleware, rolMiddleware, eliminarUsuario);
 
 module.exports = router;
