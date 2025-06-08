@@ -12,7 +12,7 @@ body {
   align-items: center;
 }
 h1 {
-  padding: 0.5em;
+  padding: 0.3em 0;
   font-size: 4em;
 }
 main {
@@ -72,4 +72,38 @@ ul {
 }
 section h2{
   text-align: center;
+}
+
+header{
+  padding: .3em;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: rgb(33, 46, 61);
+  padding: .7em;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: rgb(64, 64, 255);
+  box-shadow: 1px 1px 5px 0px black;
+}
+
+.header-carrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-carrito button{
+  padding: .5em;
+  font-weight: bold;
+  margin: .5em;
+  border: none;
+  background-color: rgb(21, 35, 160);
+  color: white;
 }

@@ -43,7 +43,7 @@ formRegister.addEventListener("submit", async (e) => {
       }),
     });
     const estado = await res.json();
-    console.log(estado)
+    console.log(estado);
     const mensaje = document.querySelector("#mensaje-register");
     if (estado.success) {
       mensaje.textContent = "Cuenta creada con exito";
@@ -54,3 +54,6 @@ formRegister.addEventListener("submit", async (e) => {
     console.log(err);
   }
 });
+
+//Adminsite
+

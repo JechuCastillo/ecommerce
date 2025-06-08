@@ -48,10 +48,14 @@ function botonAgregarCarrito(event) {
   };
   carrito.push(producto);
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  console.log(carrito);
   verCarrito();
 }
 
+function vaciarCarrito(){
+  carrito = [];
+  localStorage.setItem("carrito",JSON.stringify(carrito));
+  verCarrito();
+}
 function verCarrito() {
   const carrito = JSON.parse(localStorage.getItem("carrito"));
   const carritoList = document.querySelector("#carrito-list");

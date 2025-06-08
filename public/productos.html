@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos</title>
-    <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="./css/productos.css" />
   </head>
   <body>
     <header>
-        <h1>Productos</h1>
+      <a href="/api/usuarios/admin" target="_blank">Admin</a>
     </header>
+    <h1>Productos</h1>
     <main id="productos">
       <table>
         <tr>
@@ -21,9 +22,11 @@
       </table>
     </main>
     <section>
-      <h2>Carrito 🛒</h2>
+      <div class="header-carrito">
+        <h2>Carrito 🛒</h2>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+      </div>
       <ul id="carrito-list"></ul>
-
     </section>
     <footer>Jesus Castillo @ Todos los derechos reservados</footer>
   </body>
