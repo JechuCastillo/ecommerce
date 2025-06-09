@@ -19,12 +19,12 @@ async function eliminarProducto(req, res) {
       return res.error("Producto no encontrado", 404);
     }
     await Producto.deleteOne({ nombre: req.params.nombre });
-    res.success(producto);
+    res.success(producto,201);
   } catch (err) {
     res.error("Error al eliminar producto", 500);
   }
 }
-async function crearProducto(req, res) {
+async function crearProducto(req, res,next) {
   //Con Express validator validamos los datos que llegan por el request
   const errors = validationResult(req);
   if (!errors.isEmpty()) {

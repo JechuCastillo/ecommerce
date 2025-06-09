@@ -37,3 +37,5 @@ app.use(errorHandler);
 //     console.log("Error al mostrar usuarios");
 //   }
 // })
+
+module.exports = app;

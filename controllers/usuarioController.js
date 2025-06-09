@@ -34,7 +34,7 @@ async function crearUsuario(req, res) {
       rol: "cliente",
     });
     await nuevoUsuario.save(); // Se guarda en la BD
-    res.success(nuevoUsuario);//retorna el usuario creado
+    res.success(nuevoUsuario,201);//retorna el usuario creado
   } catch (error) {
     res.error("Error al crear usuario");
   }
