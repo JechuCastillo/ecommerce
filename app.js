@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 const responseHandler = require("./middlewares/responseHandler");
 const errorHandler = require("./middlewares/errorHandler");
 const cookies = require("cookie-parser");
+const cors  = require("cors");
 // const authMiddleware = require("./middlewares/authMiddleware");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,7 @@ app.use(responseHandler);
 app.use(express.static("public"));
 connectDB();
 app.use(cookies());
+app.use(cors());
 //rutas
 const usuarioRouter = require("./routes/usuarioRouter");
 const authRouter = require("./routes/authRoutes");
