@@ -10,7 +10,7 @@ async function login(req, res) {
     res.cookie("token", resultado.token, {
       httpOnly: true,
       secure: false,
-      sameSite: "Strict",
+      sameSite: "lax",
       maxAge: 600000,
     });
     res.success(resultado); //En caso de exito devuelve el token
@@ -19,6 +19,10 @@ async function login(req, res) {
   }
 }
 
+function logout(req, res) {
+  res.clearCookie("token");
+  res.json({ status: "ok", msg: "Cookie borrada" });
+}
 async function loginUsuario(usuarioLogin) {
   //Verifica que el usuario exista en la base de datos
   const usuarioBD = await Usuario.findOne({ email: usuarioLogin.email });
@@ -44,4 +48,4 @@ async function loginUsuario(usuarioLogin) {
   };
 }
 
-module.exports = { login };
+module.exports = { login, logout };

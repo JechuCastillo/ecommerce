@@ -14,7 +14,7 @@ app.use(responseHandler);
 app.use(express.static("public"));
 connectDB();
 app.use(cookies());
-app.use(cors());
+app.use(cors({credentials:true , origin:"http://localhost:5173"}));
 //rutas
 const usuarioRouter = require("./routes/usuarioRouter");
 const authRouter = require("./routes/authRoutes");
