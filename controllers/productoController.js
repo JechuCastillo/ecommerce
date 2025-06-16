@@ -19,7 +19,7 @@ async function eliminarProducto(req, res) {
       return res.error("Producto no encontrado", 404);
     }
     await Producto.deleteOne({ nombre: req.params.nombre });
-    res.success(producto,201);
+    res.success(producto,200);
   } catch (err) {
     res.error("Error al eliminar producto", 500);
   }
