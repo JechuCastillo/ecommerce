@@ -40,6 +40,18 @@ async function crearProducto(req, res,next) {
   }
 }
 
+async function actualizarProducto(req,res){
+  try {
+    const producto = await Producto.find({ nombre: req.params.nombre });
+    if(producto.length === 0){
+      return res.error("Producto no encontrado",404);
+    }
+    await Producto.updateOne({ nombre: req.params.nombre }, req.body);
+    res.success(producto,200);
+  } catch (err) {
+    res.error("Error al actualizar producto", 500);
+  }
+}
 
 
 
@@ -65,4 +77,5 @@ module.exports = {
   crearProducto,
   validarProducto,
   eliminarProducto,
+  actualizarProducto
 };
