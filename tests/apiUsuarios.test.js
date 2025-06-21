@@ -1,5 +1,6 @@
 const request = require("supertest");
 const mongoose = require("mongoose");
+const Usuario = require("../models/usuario");
 const app = require("../app");
 const userTest = {
   nombreUsuario: "Testeador",
@@ -22,6 +23,7 @@ describe("Pruebas a API", () => {
     expect(res.body.success).toBe(false);
   });
   afterAll(async () => {
+    await Usuario.deleteOne({ nombreUsuario: "Testeador" });
     await mongoose.connection.close();
   });
 });

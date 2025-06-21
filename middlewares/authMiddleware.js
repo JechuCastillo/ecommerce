@@ -1,13 +1,5 @@
 const jwt = require("../service/jwtService");
 function authMiddleware(req, res, next) {
-  // Obtiene el token del encabezado Authorization
-  // const authHeader = req.headers.authorization; //Brearer
-  // if (!authHeader) {
-  //   //Si esta vacio quiere decir que no hay token
-  //   res.error("Token requerido", 401, { error: "Token requerido" });
-  // }
-  // const token = authHeader.split(" ")[1]; //Accede al Brearer
-  
   const token = req.cookies.token;
   if (!token) {
     return res.error("Token requerido", 401, "El usuario no posee token");

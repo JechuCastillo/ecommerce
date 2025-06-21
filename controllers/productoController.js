@@ -49,7 +49,7 @@ async function actualizarProducto(req,res){
     await Producto.updateOne({ nombre: req.params.nombre }, req.body);
     res.success(producto,200);
   } catch (err) {
-    res.error("Error al actualizar producto", 500);
+    res.error("Error al actualizar producto", 400);
   }
 }
 
