@@ -10,7 +10,7 @@ const {
   actualizarProducto
 } = require("../controllers/productoController");
 
-router.get("/", authMiddleware,listarProductos);
+router.get("/",listarProductos);
 router.post("/", authMiddleware,rolMiddleware, validarProducto, crearProducto);
 router.put("/:nombre",authMiddleware,rolMiddleware, actualizarProducto);
 router.delete("/:nombre",authMiddleware,rolMiddleware, eliminarProducto);
